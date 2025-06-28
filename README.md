@@ -1,0 +1,1 @@
+# Sistem-IoT-pentru-monitorizarea-si-irigarea-plantelor-de-exterior
