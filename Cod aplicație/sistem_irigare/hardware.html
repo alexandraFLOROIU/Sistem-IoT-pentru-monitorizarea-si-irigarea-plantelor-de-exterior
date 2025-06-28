@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Componente">
+    <link rel="stylesheet" href="hardware.css">
+    <title>Hardware</title>
+</head>
+<body>
+    <nav>
+        <p>💧Smart Plant Irrigation🪴</p>
+        <div class="btn-group">
+            <a href="index.php" class="nav-btn">🌱 Acasă</a>
+        </div>   
+    </nav>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="slide active">
+                <img src="./img/placa.png" alt="Placa">
+                <div class="info">
+                    <h3>ESP32 DEVKIT V1</h3>
+                    <p>Permite conectivitate Wi-Fi, prezintă numeroși pini de intrare/ieșire și are un consum redus de energie. Dispune de pini de alimentare care furnizează atât 3,3V, cât și 5V, permițând conectarea diverselor componente.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="./img/adaptor.png" alt="Adaptor">
+                <div class="info">
+                    <h3>Adaptor</h3>
+                    <p>Acest adaptor asigură o conexiune stabilă și bine organizată, întrucât extinde numărul de pini de alimentare (VCC) și masă (GND), fiecare linie de conexiune de pe adaptor având 3 pini: semnal(S), alimentare (VCC) și masă (GND).</p>
+                </div>
+             </div>
+             <div class="slide">
+                <img src="./img/umiditate_sol.png" alt="Umiditate sol">
+                <div class="info">
+                    <h3>Senzor umiditate sol</h3>
+                    <p>Detectează nivelul de umiditate al solului. Prezintă o ieșire digitală care poate furniza valorile 0 ( solul este uscat) sau 1 (solul este umed). Ieșirea analogică este mult mai precisă, furnizează o tensiune care este proporțională cu gradul de umiditate.</p>
+                </div>
+             </div>
+             <div class="slide">
+                <img src="./img/temperatura.png" alt="Temperatura">
+                <div class="info">
+                    <h3>Senzor de temperatură DHT22</h3>
+                    <p>Măsoară temperaturi cuprinse în intervalul -40 °C-80°C și umiditatea aerului, exprimată procentual, între 0% și 100%. Este un senzor digital și funcționează cu o tensiune de alimentare aflată în intervalul de 3.3V-6V.</p>
+                </div>
+             </div>
+             <div class="slide">
+                <img src="./img/ploaie.png" alt="Senzor de ploaie">
+                <div class="info">
+                    <h3>Senzor de ploaie</h3>
+                    <p>În momentul în care modulul detectează picăturile de ploaie, ledul acestuia se va aprinde, iar când nu va mai detecta se va stinge. Contribuie la economisirea apei, oprind pompa în momentul în care detectează picături de ploaie.</p>
+                </div>
+             </div>
+             <div class="slide">
+                <img src="./img/lumina.png" alt="Senzor de lumină">
+                <div class="info">
+                    <h3>Senzor de lumină</h3>
+                    <p>Modulul are capacitatea de a măsura intensitatea luminoasă ambientală, indiferent de tipul sursei, într-un interval cuprins între 0 și 120.000 luxi. În ceea ce privește tensiunea de alimentare, modulul poate fi alimentat atât cu 3.3V, cât și cu 5V. </p>
+                </div>
+             </div>
+             <div class="slide">
+                <img src="./img/rtc.png" alt="Modul RTC">
+                <div class="info">
+                    <h3>Modul RTC</h3>
+                    <p>Poate furniza date precum: ani, luni, zile, ore, minute, secunde și le păstrează  pentru o perioadă de aproximativ 5 ani. Are un oscilator cu cristal compensat termic (TCXO), ceea ce îi oferă o precizie ridicată. </p>
+                </div>
+             </div>
+             <div class="slide">
+                <img src="./img/nivel_apa.png" alt="Nivel apă">
+                <div class="info">
+                    <h3>Senzor de nivel apă</h3>
+                    <p>Este un dispozitiv analogic care poate monitoriza și detecta nivelul de apă dintr-un rezervor pentru a preveni funcționarea în gol a pompei . Tensiunea de operare este de 3-5V, iar temperatura de operare 10-30°C.</p>
+                </div>
+             </div>
+         </div>
+        <button class="prev" onclick="move(-1)">❮</button>
+        <button class="next" onclick="move(1)">❯</button>
+    </div>
+    <footer class="footer">
+        <div>
+           <span>🌎 ©️ 2025 Smart Plant Irrigation</span>
+        <div>
+    </footer>
+    <script>  
+        let currentIndex=0;
+        // Funcție pentru a schimba slide-ul
+        function move(direction) {
+            const allSlides = document.querySelectorAll(".slide");
+            currentIndex += direction; 
+            if (currentIndex < 0) { 
+                // Va fi afișat ultimul slide
+                currentIndex = allSlides.length - 1; 
+            } else if (currentIndex >= allSlides.length) {
+                // Va fi afișat primul slide
+                currentIndex = 0; 
+            }
+            const carousel = document.querySelector(".carousel");
+            // Mutăm slide-ul pentru a-l afișa pe cel corespunzător
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+        // Repoziționăm sliderul la redimensionarea ferestrei
+        window.addEventListener('resize', () => {
+            const carousel = document.querySelector(".carousel");
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        });
+    </script>
+</body>
+</html>

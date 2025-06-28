@@ -1,0 +1,127 @@
+:root{
+    --green:rgb(106, 156, 137);
+    --dark-green:rgb(22, 66, 60);
+    --light_green:rgb(196, 218, 210);
+}
+
+* {
+  padding:0;
+  margin:0;   
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url("./img/fundal8.png")no-repeat; 
+  background-size: cover;
+  background-attachment: fixed;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  overflow-y: scroll;
+  color: #010b02;
+  background-position:center;
+}
+
+/*Bara de navigare*/
+nav {
+  background: #ffffff; 
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.2); 
+  padding: 0.6rem 1rem;
+  width: 100%;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav p {
+  font-size:1.2rem;
+}
+
+nav .nav-btn {
+  background-color: var(--green);
+  width:150px;
+  color:white;
+  text-decoration:none;
+  border:none;
+  padding:10px 15px;
+  font-size :1rem;
+  border-radius:6px;
+  cursor:pointer;
+  text-align: center;
+}
+
+nav .nav-btn:hover {
+  background-color: var(--dark-green); 
+  color: white;
+}
+
+h1 {
+  margin-top:70px;
+  font-weight:bold;
+  color: var(--dark-green);
+} 
+
+/*Secțiunea de final*/
+footer {
+  background-color: #ffffff; 
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.2); 
+  width: 100%;
+  padding: 1rem;
+  position:fixed;
+  bottom:0;
+  margin-bottom:0.1rem;
+  text-align:center;
+}
+
+/*Secțiune*/
+.container {
+  display:grid;
+  grid-template-columns:repeat(4,minmax(300px,1fr));
+  gap:50px;
+  margin-top:100px;
+  width:90%;
+  max-width:700px;
+  align-items: center;
+  justify-content: center;    
+}
+
+/*Grafic*/
+.chart-container {
+  background: #f2f4f2;
+  border-radius:12px;
+  padding:20px;
+  border: 1px solid #a2b3a2;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.25); 
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  transition: transform 0.3s;
+}
+
+.chart-container:hover {
+  transform: scale(1.05);
+  transform:scale(1.1);
+  cursor:pointer;
+  box-shadow: 10px 8px 10px var(--light_green)
+}
+
+.chart-value {
+  margin-top:30px;
+  margin-bottom:-50px;
+  font-weight: bold;
+  font-size:22px;
+}
+
+h2 {
+  display:flex;
+  margin-left: 50px;
+  font-size:20px;
+  gap:6px;
+  color: var(--dark-green);
+}
+
+canvas {
+  width:100%;
+  height:auto;
+}

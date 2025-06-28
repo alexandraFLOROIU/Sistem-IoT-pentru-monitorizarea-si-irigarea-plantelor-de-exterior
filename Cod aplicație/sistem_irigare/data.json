@@ -1,0 +1,54 @@
+{
+   "primăvară": {
+               "Panseluta": {"optimalMoisture": 65, "image":"./img/panseluta.png"},
+               "Petunia": {"optimalMoisture": 60, "image":"./img/petunie.jpg" },
+               "Lavanda": {"optimalMoisture": 40,"image":"./img/lavanda.png" },
+               "Muscata": {"optimalMoisture": 50, "image":"./img/muscata.png" },
+               "Zambila": {"optimalMoisture": 55, "image":"./img/zambila.png"},
+               "Clopotel": {"optimalMoisture": 55, "image":"./img/clopotel.png" },
+               "Hortensia": {"optimalMoisture": 65, "image":"./img/hortensia.png" },
+               "Trandafir": {"optimalMoisture": 60, "image":"./img/trandafir.png" },
+               "Bujor": {"optimalMoisture": 60, "image":"./img/bujor.png"},
+               "Ciclama": {"optimalMoisture": 40, "image":"./img/ciclama.png"},
+               "Molid": {"optimalMoisture": 50, "image":"./img/molid.png"},
+               "Primula": {"optimalMoisture": 55, "image":"./img/primula.png"}
+             },
+   "vară": {
+               "Petunia": {"optimalMoisture": 55,"image":"./img/petunie.jpg" },
+               "Lavanda": {"optimalMoisture": 35, "image":"./img/lavanda.png" },
+               "Muscata": {"optimalMoisture": 60, "image":"./img/muscata.png" },
+               "Gazania": {"optimalMoisture": 50, "image":"./img/gazania.png"},
+               "Begonia": {"optimalMoisture": 65,  "image":"./img/begonia.png"},
+               "Clopotel": {"optimalMoisture": 55, "image":"./img/clopotel.png" },
+               "Hortensia": {"optimalMoisture": 70, "image":"./img/hortensia.png" },
+               "Trandafir": {"optimalMoisture": 65, "image":"./img/trandafir.png" },
+               "Bujor": {"optimalMoisture": 60, "image":"./img/bujor.png"},
+               "Molid": {"optimalMoisture": 40,  "image":"./img/molid.png"}
+
+            },       
+   "toamnă": {
+               "Panseluta": {"optimalMoisture": 50, "image":"./img/panseluta.png"},
+               "Lavanda": {"optimalMoisture": 30, "image":"./img/lavanda.png" },
+               "Muscata": {"optimalMoisture": 50, "image":"./img/muscata.png" },
+               "Clopotel": {"optimalMoisture": 55, "image":"./img/clopotel.png"  },
+               "Hortensia": {"optimalMoisture": 60, "image":"./img/hortensia.png" },
+               "Trandafir": {"optimalMoisture": 55, "image":"./img/trandafir.png" },
+               "Ciclama": {"optimalMoisture": 60, "image":"./img/ciclama.png"},
+               "Bujor": {"optimalMoisture": 50,"image":"./img/bujor.png"},
+               "Primula": {"optimalMoisture": 45, "image":"./img/primula.png"},
+               "Molid": {"optimalMoisture": 55, "image":"./img/molid.png"},
+               "Gaultheria": {"optimalMoisture": 55, "image":"./img/gaultheria.png"}
+            },   
+  "iarnă": {
+               "Panseluta": {"optimalMoisture": 55, "image":"./img/panseluta.png"},
+               "Molid": {"optimalMoisture": 45, "image":"./img/molid.png"},
+               "Hortensia": {"optimalMoisture": 50, "image":"./img/hortensia.png" },
+               "Trandafir": {"optimalMoisture": 50, "image":"./img/trandafir.png" },
+               "Bujor": {"optimalMoisture": 45, "image":"./img/bujor.png"},
+               "Ciclama": {"optimalMoisture": 55, "image":"./img/ciclama.png"},
+               "Primula": {"optimalMoisture": 55, "image":"./img/primula.png"},
+               "Skimmia": {"optimalMoisture": 50, "image":"./img/skimmia.png"},
+               "Gaultheria": {"optimalMoisture": 50, "image":"./img/gaultheria.png"}
+            }
+}
+  

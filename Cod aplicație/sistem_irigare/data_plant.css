@@ -1,0 +1,300 @@
+:root{
+    --green:rgb(106, 156, 137);
+    --dark-green:rgb(22, 66, 60);
+    --light_green:rgb(196, 218, 210);
+}
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    color: #010b02;
+    line-height:1.5;
+    padding-bottom:60px;
+    background: url("./img/planta2.jpg")no-repeat; 
+    background-size: cover;
+    background-attachment: fixed;
+    background-position:center;
+}
+
+/*Bara de navigare*/
+nav {
+    background: #ffffff; 
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.2); 
+    padding: 0.5rem 1rem;
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav p {
+    margin:0;
+    font-size:1.2rem;
+}
+
+nav .btn-group {
+    display:flex;
+    gap:12px;
+}
+
+nav .nav-btn {
+   flex:1;
+   background-color: var(--green);
+   min-width:150px;
+   color:white;
+   text-decoration:none;
+   border:none;
+   padding:10px 10px;
+   font-size :1rem;
+   border-radius:6px;
+   cursor:pointer;
+   text-align: center;
+}
+
+nav .nav-btn:hover {
+    background-color: var(--dark-green); 
+    color: white;
+}
+
+/*Secțiunea de final*/
+footer {
+    background-color: #ffffff; 
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.2); 
+    width: 100%;
+    padding: 1rem;
+    position:fixed;
+    bottom:0;
+    text-align:center;
+}
+
+/*Secțiunea de început*/
+header {
+   background-color:var(--green);
+   color:white;
+   text-align:center;
+   padding:20px;
+   border-radius:10px 10px 0 0;
+
+}
+header h1 {
+    font-size:1.8rem;
+}
+
+.season-and-plant {
+    font-size:1.2rem;
+    font-weight:bold;
+    margin-top:9px;
+}
+
+.season-name {
+    color: white;
+}
+.plant-name {
+    color:white;
+}
+
+/*Secțiune*/
+.container {
+    max-width:700px;
+    background-color: white;
+    margin:35px auto;
+    overflow: hidden;
+    border-radius:10px;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.25); 
+    text-align:left;
+    padding-bottom:20px;
+}
+
+/*Datele de la senzori*/
+.sensor-data {
+    padding:20px;
+    border-bottom:1px solid #cbcbcb;
+    text-align:center;
+}
+
+.sensor-data h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: var(--dark-green);
+    text-align:center;
+}
+
+/*Formularul de irigare*/
+form#watering  {
+    background:white;
+    margin:20px auto;
+}
+
+form#watering h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: var(--dark-green);
+    text-align:center;
+}
+
+.form-group {
+    display:flex;
+    flex-direction:column;
+    margin-bottom:15px;
+}
+
+.form-group label {
+    margin-bottom:5px;
+    margin-left:15px;
+    font-weight: bold;
+}
+
+.form-group select,
+.form-group input {
+    font-size:0.9rem;
+    background-color: #f9f9f9f8;
+    margin-left:15px;
+    margin-right:15px;
+    padding: 10px;
+    border: 1px solid #cbcbcb;
+    border-radius:5px;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+    outline:none;
+}
+
+/*Setări suplimentare*/
+#automatic_settings,
+#periodic_settings {
+    margin-top:15px;
+    margin-bottom:15px;
+    padding:15px;
+    margin-left:15px;
+    margin-right:15px;
+    border: 1px solid #cbcbcb;
+    border-radius:5px;
+    background-color: #f9f9f9f8;
+}
+
+/*Buton*/
+.button-section {
+    display:flex;
+    justify-content:right;
+    margin-top:20px;
+    margin-right:20px;
+}
+
+#save {
+    background-color: var(--green);
+    color:white;
+    text-transform: uppercase;
+    border:none;
+    width:150px;
+    color:white;
+    text-decoration:none;
+    border:none;
+    padding:14px 10px;
+    font-size :0.8rem;
+    border-radius:6px;
+    cursor:pointer;
+    text-align: center;
+}
+
+#save:hover {
+    background-color: var(--dark-green); 
+    color: white;
+}
+
+.hidden {
+    display:none;
+}
+
+.aux {
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index:9999; 
+}
+
+.aux h2 {
+    color:red;
+}   
+
+.aux-content {
+    width:80%;
+    max-width:400px;
+    height:200px;
+    margin:0 auto;
+    padding:20px;
+    background-color: #fff;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    text-align:center;
+    border-radius:6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.aux .alert-button {
+    display:flex;
+    justify-content:center;
+    margin-top:20px;
+}
+
+#closeAux {
+    background-color: var(--green);
+    color:white;
+    text-transform: uppercase;
+    font-weight:bold;
+    padding:10px 15px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+#closeAux:hover {
+    background-color: var(--dark-green); 
+    color: white;
+}
+
+#sensor {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 5px; 
+    max-width: 500px;  
+    margin: 0 auto;
+    margin-bottom:20px;
+    margin-top:20px;
+}
+
+#wateringType, #status_pump, #separator {
+    display: inline-block;  
+    margin: 0 10px;        
+}
+
+/*Informații despre cantitatea de apă consumată din rezervor*/
+.form-group .info_duration {
+    position:absolute;
+    cursor:pointer;
+    visibility: hidden;
+    background-color: antiquewhite;
+    z-index:500;
+    border: solid 2px rgb(195, 110, 67);
+    border-radius:5px;
+    text-align: center;
+    left:900px;
+    width:200px;
+    transition:opacity 0.3s;
+    top:550px;
+}
+
+.form-group:hover .info_duration {
+    visibility: visible;
+    opacity: 1;
+}

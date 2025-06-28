@@ -1,0 +1,175 @@
+:root {
+    --green:rgb(106, 156, 137);
+    --dark-green:rgb(22, 66, 60);
+    --light_green:rgb(196, 218, 210);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(233, 230, 227, 0.553);
+    color: #010b02;
+    line-height:1.5;
+    overflow-y: scroll;
+    padding-bottom:60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url("./img/planta2.jpg")no-repeat; 
+    background-size: cover;
+    background-attachment: fixed;
+    background-position:center;
+}
+
+/*Bara de navigare*/
+nav {
+    background: #ffffff; 
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.2); 
+    padding: 0.5rem 1rem;
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav p {
+    margin:0;
+    font-size:1.2rem;
+}
+
+nav .nav-btn {
+   background-color: var(--green);
+   width:150px;
+   color:white;
+   text-decoration:none;
+   border:none;
+   padding:10px 10px;
+   font-size :1rem;
+   border-radius:6px;
+   cursor:pointer;
+   text-align: center;
+}
+
+nav .nav-btn:hover {
+    background-color: var(--dark-green); 
+    color: white;
+}
+
+/*Secțiunea de final*/
+footer {
+    background-color: #ffffff; 
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.5); 
+    width: 100%;
+    padding: 1rem;
+    position:fixed;
+    bottom:0;
+    text-align:center;
+}
+
+/*Secțiune*/
+.container {
+    position:relative;
+    margin:20px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.25); 
+    max-width:1050px;
+    padding:20px;
+}
+
+/*Secțiunea de început*/
+header {
+    color:#4b9662;
+    font-size:1rem;
+    text-align:center;
+    padding:20px;
+    border-radius: 10px 10px 00;
+}
+
+form {
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    gap:12px;
+    margin-bottom:20px;
+}
+
+select, button {
+    font-size:15px;
+    padding:10px;
+    border-radius:6px;
+    width:135px;
+}
+
+button {
+    background-color: var(--green);
+    cursor:pointer;
+    color:white;
+    border:none;
+}
+
+button:hover {
+    background-color: var(--dark-green); 
+    color: white;
+}
+
+/*Tabel*/
+table {
+    border-collapse:collapse;
+    width:100%;
+}
+
+th,td {
+    text-align:center;
+    padding:10px;
+    border: 1px solid #cdc9c9f4;
+}
+
+th {
+    color:white;
+    background-color: var(--light_green);
+}
+
+.no-data {
+    margin-top:20px;
+    color:#383a39f4;
+    text-align:center;
+}
+
+/*Paginare*/
+.pagination {
+    margin-top:10px;
+    display:flex;
+    justify-content: center;;
+}
+
+.pagination button {
+    border:none;
+    color:white;
+    background-color: var(--light_green);
+    cursor:pointer;
+    margin:0 5px;
+    padding: 9px 13px;
+}
+
+.pagination button.active {
+    background-color: var(--dark-green); 
+    color: white;
+}
+
+.button-export {
+    position: absolute;
+    background-color: #EABD8C;
+    margin-right: 5px;
+    cursor:pointer;
+    color:white;
+    border:none;
+    font-size:15px;
+    padding:10px;
+    border-radius:6px;
+    width:140px;
+    text-decoration:none;
+}

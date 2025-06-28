@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tablou de bord">
+    <link rel="stylesheet" href="dashboard_plant.css">
+    <title>Tablou de bord</title>
+</head>
+<body>
+    <nav>
+        <p>💧Smart Plant Irrigation🪴</p>
+        <a href="data_plant.php" class="nav-btn" id="plantBack">🌼Date plantă</a>
+    </nav>
+    <h1> 📊 Monitorizarea valorilor</h1>
+    <div class="container">
+        <div class="chart-container">
+            <h2>🌡️Temperatura</h2>
+            <div class="chart-value" id="value-for-temperature">--</div>
+            <canvas id="chart-for-temperature"></canvas>
+        </div>
+        <div class="chart-container">
+            <h2>💧Umiditatea aerului</h2>
+            <div class="chart-value" id="value-for-airhumidity">--</div>
+            <canvas id="chart-for-airhumidity"></canvas>
+        </div>
+        <div class="chart-container">
+            <h2>🌱Umiditatea solului</h2>
+            <div class="chart-value" id="value-for-humiditySoil">--</div>
+            <canvas id="chart-for-humiditySoil"></canvas>
+        </div>
+        <div class="chart-container">
+            <h2>💦Nivelul de apă</h2>
+            <div class="chart-value" id="value-for-WaterLevel">--</div>
+            <canvas id="chart-for-WaterLevel"></canvas>
+        </div>
+    </div>
+    <footer class="footer">
+        <div>
+           <span>🌎 ©️ 2025 Smart Plant Irrigation</span>
+        <div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        let charts={};
+        // Funcția va fi executată când structura paginii e complet încărcată
+        document.addEventListener("DOMContentLoaded", function() {
+            charts["temperature"] = createChart(document.getElementById("chart-for-temperature").getContext('2d'), "°C",50,"temperature");
+            charts["airhumidity"] = createChart(document.getElementById("chart-for-airhumidity").getContext('2d'), "%",100,"airhumidity");
+            charts["humiditySoil"] = createChart(document.getElementById("chart-for-humiditySoil").getContext('2d'), "%",100,"humiditySoil");
+            charts["WaterLevel"] = createChart(document.getElementById("chart-for-WaterLevel").getContext('2d'), "%",100,"WaterLevel");
+            fetchData();
+            setInterval(fetchData, 5000);
+            document.getElementById("plantBack").href=`data_plant.php`;
+        });
+        // Stabilim culorile pentru fiecare grafic
+        const chartColors={
+            temperature: "#d22b2b",
+            airhumidity: "#48CAE4",
+            humiditySoil: "#cc9c7b",
+            WaterLevel: "#0066b2"
+        };
+        // Definim o funcție pentru creare grafic
+        function createChart(ctx,label,maxValue,sensor){
+            return new Chart(ctx, {
+                type: "doughnut",
+                data: {
+                    labels: [label,""],
+                    datasets:[{ 
+                        data: [0,maxValue],
+                        backgroundColor: [chartColors[sensor],"#e0e0e0"],
+                        borderWidth:1.5
+                    }]
+                },
+                options: {
+                    cutout:"80%",
+                    reponsive:true,
+                    // Setăm unghiul de start al graficului
+                    rotation: -90,
+                    circumference:180,
+                    maxValue: maxValue,
+                    plugins: { legend: {display:false}}
+                },
+            });
+        }
+        // Trimitem o cerere GET pentru a obține valorile pentru fiecare senzor
+        function fetchData(){
+            fetch("getLatestData.php")
+                .then(response => response.json())
+                .then( data => {
+                    console.log("Data: ", data);
+                    // Inițializăm cu 0 valorile
+                    let values = {temperature:0, airhumidity:0, humiditySoil:0, WaterLevel:0};
+                    data.forEach(sensor =>{
+                        if (sensor.type in values) {
+                            values[sensor.type] = sensor.value;
+                        }
+                    });
+                    // Parcurgem toate cheile
+                    Object.keys(values).forEach(sensor =>
+                    {
+                        // Verificăm dacă există grafic pentru senzorul respectiv
+                        if (charts[sensor]) {
+                            updateChart(charts[sensor],values[sensor],sensor);
+                        }
+                    });
+                })
+                .catch(error => console.error("Eroare:", error));
+        }
+        function updateChart(chart,value,sensor)
+        {
+            chart.data.datasets[0].data[0]=value;
+            chart.data.datasets[0].data[1]=chart.options.maxValue-value;
+            chart.update();
+            document.getElementById(`value-for-${sensor}`).textContent=`${value}${sensor === "temperature"? "°C": (sensor=== "WaterLevel"? "":"%")}`;
+        }
+    </script>
+</body>
+</html>       

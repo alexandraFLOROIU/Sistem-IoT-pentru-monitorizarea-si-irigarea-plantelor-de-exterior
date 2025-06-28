@@ -1,0 +1,134 @@
+:root {
+    --green:rgb(106, 156, 137);
+    --dark-green:rgb(22, 66, 60);
+    --light_green:rgb(196, 218, 210);
+}
+* {
+  padding:0;
+  margin:0;   
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url("./img/hardware.png")no-repeat; 
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-y: scroll;
+  color: #010b02;
+  background-position:center;
+}
+
+/*Bara de navigare*/
+nav {
+    background-color: #ffffff;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.2); 
+    padding: 1rem 1rem;
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav p {
+    margin-top:0.1rem;
+    font-size:1.2rem;
+    margin-bottom:0.1rem;
+}
+
+nav .nav-btn {
+   background-color:var(--green);
+   color:white;
+   text-decoration:none;
+   border:none;
+   padding:9px 40px;
+   font-size :1rem;
+   border-radius:6px;
+   cursor:pointer;
+   text-align: center;
+}
+
+nav .nav-btn:hover {
+    background-color: rgb(22, 66, 60); 
+    color: white;
+}
+
+.carousel-container {
+    flex:1;
+    position:relative;
+    margin:7rem auto;
+    width:100%;
+    max-width:650px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 100%; 
+    box-sizing:border-box;
+    text-align:center;
+}
+
+img {
+    width: 100%;
+    height: 360px;
+    object-fit:contain;
+    border-bottom:2px solid #39d367;
+}
+
+.info {
+    background-color: #e4edf5;
+    padding: 12px;
+}
+
+h3 {
+    color: #13b778;
+}
+
+.info p {
+    color: #4f4e4e;
+}
+
+button {
+    position:absolute;
+    top:50%;
+    font-size:17px;
+    transform:translateY(-50%);
+    cursor:pointer;
+    background-color: #9dc49f;
+    color:white;
+    padding:10px 20px;
+    border:none;
+    border-radius: 50%;
+    font-size:18px;
+}
+
+button:hover {
+    background-color: rgba(17, 69, 174, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/*Secțiunea de final*/
+footer {
+    background-color: #ffffff; 
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.5); 
+    width: 100%;
+    padding: 1rem;
+    position:fixed;
+    bottom:0;
+    text-align:center;
+    margin-bottom:0.1rem;
+}

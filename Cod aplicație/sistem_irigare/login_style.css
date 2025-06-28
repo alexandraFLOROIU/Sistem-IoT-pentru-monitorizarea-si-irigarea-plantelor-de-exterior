@@ -1,0 +1,213 @@
+:root{
+    --dark-green:rgb(22, 66, 60);
+    --green:rgb(29, 121, 85);
+    --light_green:rgb(196, 218, 210);
+    --grey:rgb(233, 239, 236);
+}
+
+html, body {
+    overflow-x:hidden;
+    height:100vh;
+    display:flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center;
+    align-items: center;
+    background: url('./img/planta2.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+    
+* {
+    padding:0;
+    margin:0;   
+}
+
+.container {
+    position: relative;
+    margin-right: 200px;
+    width:500px;
+    max-width:90vw;
+    padding:20px;
+    border-radius:20px;
+    background-color:var(--grey);
+    backdrop-filter:blur(10px);
+    border-style:solid;
+    border-width: 2px;
+    border-color: #748873;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.3);
+}
+    
+.container h1 {
+    font-size: 40px;
+    text-align:center
+}
+    
+.container .input-box {
+    width:80%;
+    height:60px;
+    left:20px;
+    color:var(--green);
+}
+    
+.input-box input {
+    width:90%;
+    height:40px;
+    background-color: transparent; 
+    border: 2px solid rgb(70,154,55);
+    border-radius:15px;
+    transform: translate(9%);
+    padding-left: 20px;
+}
+    
+.input-box input::placeholder {
+    color:var(--dark-green);
+    font-size:15px;
+    font-weight:bold;
+    transform: translate(1%);
+}
+    
+.container .forgot-or-remember {
+    display:flex;
+    justify-content:space-between;
+    font-size: 14px;
+    margin: 5px 55px 14px;
+}
+    
+.forgot-or-remember label input {
+    accent-color: white;
+    margin-right: 10px
+}
+
+#forgotPassword {
+    text-decoration: none;
+}
+
+.container .btn {
+    width:77%;
+    height:40px;
+    background-color:var(--green);
+    border:none;
+    outline:none;
+    border-radius:15px;
+    border: 2px solid  rgb(70, 154, 55);
+    cursor: pointer;
+    display:block;
+    margin:10px auto;
+    color: rgb(239, 239, 239);
+    font-weight: 250px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    font-size:20px;
+}
+
+.container .btn:hover {
+    background-color: var(--dark-green);
+    color: white;
+}
+    
+.container .register {
+    font-size: 14px;
+    text-align:center;
+    margin:15px;
+}
+    
+.register p a {
+    color:var(--dark-green);
+    text-decoration: none;
+    font-weight:2000px;
+    margin-left:15px;
+    font-size: 20px;
+}
+    
+.register p a:hover {
+    text-decoration: none;
+    background-color: var(--dark-green); 
+    border-radius:10px;
+    padding:4px;
+    color: white;
+}
+
+.message span {
+    position: fixed;
+    color:#F4A460;
+    font-size: 1rem;
+    top: 70px;
+}
+     
+.message i {
+    margin-left: 10px; 
+    position: fixed;
+    font-size: 1rem;
+    color:#d7910e;
+    cursor: pointer;
+    top:70px;
+}
+     
+.message i:hover {
+    transform: rotate(90deg);
+}
+
+.input-box {
+    position: relative;
+}
+    
+.input-box i {
+    position: absolute;
+    top: 25%;
+    right: 5px;
+    font-size: 15px;  
+    font-weight:bold;
+    color:var(--dark-green);  
+}
+    
+.modal h2 {
+    color:green;
+    text-align:center;
+    margin-bottom:20px;
+}   
+
+.modal-content {
+    width:80%;
+    max-width:400px;
+    height:20px;
+    margin:0 auto;
+    padding:20px;
+    background-color: #f8d7da;
+    color:#721c24;
+    position:absolute;
+    left:50%;
+    top:15%;
+    transform: translate(-50%,-50%);
+    border-radius:10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/*Bara de navigare*/
+nav {
+    position:fixed;
+    top:0;
+    left:0;
+    background: #ffffff; 
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.2); 
+    padding: 1rem 1rem;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav p {
+    margin-top:0.1rem;
+    font-size:1.2rem;
+    margin-bottom:0.1rem;
+}
+
+/*Secțiunea de final*/
+.footer {
+    background-color: #ffffff; 
+    text-align: center;
+    padding: 1rem;
+    position: fixed; 
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.2);
+    margin-bottom:0.1rem; 
+    margin-right:1rem;
+}  

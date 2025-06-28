@@ -1,0 +1,103 @@
+:root{
+    --dark-green:rgb(22, 66, 60);
+    --green:rgb(29, 121, 85);
+    --light_green:rgb(196, 218, 210);
+    --grey:rgb(233, 239, 236);
+    --light__light_green:#E7FBE6;
+}
+
+* {
+    padding:0;
+    margin:0;   
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url("./img/planta2.jpg")no-repeat; 
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-y: scroll;
+    color: #010b02;
+    background-position:center;
+}
+  
+.container {
+    padding-bottom:40px;
+}
+
+.container-feedback {
+    width:80%;
+    margin:50px auto; 
+    background-color:rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.25); 
+    overflow:hidden;
+    padding:40px;
+    border-radius:20px;
+    padding-top:20px;
+}
+
+h1 {
+    color:black;
+}
+  
+.ratings {
+    color: #f39c12;
+    font-size: 20px;
+}
+
+.username {
+    margin-top:30px;
+}
+
+.create_at {
+    color:#868585;
+}
+
+/*Secțiunea de final*/ 
+footer {
+    background-color: #ffffff; 
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.2); 
+    width: 100%;
+    padding: 1rem;
+    position:fixed;
+    bottom:0;
+    left:1px;
+    text-align:center;
+    margin-bottom:0.1rem;
+}
+  
+/*Bara de navigare*/
+nav {
+    background: #ffffff; 
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.2); 
+    padding: 1rem 1rem;
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+nav p {
+    margin-top:0.1rem;
+    font-size:1.2rem;
+    margin-bottom:0.1rem;
+}
+
+nav .nav-btn {
+    background-color: var(--green);
+    width:150px;
+    color:white;
+    text-decoration:none;
+    border:none;
+    padding:10px 15px;
+    font-size :1rem;
+    border-radius:6px;
+    cursor:pointer;
+    text-align: center;
+}
+  
+nav .nav-btn:hover {
+    background-color: var(--dark-green); 
+    color: white;
+}

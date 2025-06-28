@@ -1,0 +1,190 @@
+:root{
+    --dark-green:rgb(22, 66, 60);
+    --green:rgb(106, 156, 137);
+    --light_green:rgb(196, 218, 210);
+    --light__light_green:#E7FBE6;
+    --grey:rgb(233, 239, 236);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url("./img/planta2.jpg")no-repeat; 
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-y: scroll;
+    color: #010b02;
+    background-position:center;
+}
+/*Bara de navigare*/
+nav {
+    background: #ffffff; 
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.2); 
+    padding: 1rem 1rem;
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav p {
+    margin-top:0.1rem;
+    font-size:1.2rem;
+    margin-bottom:0.1rem;
+}
+
+nav .nav-btn {
+    background-color: var(--green);
+    width:150px;
+    color:white;
+    text-decoration:none;
+    border:none;
+    padding:10px 40px;
+    font-size :1rem;
+    border-radius:6px;
+    cursor:pointer;
+    text-align: center;
+}
+
+nav .nav-btn:hover {
+    background-color: var(--dark-green); 
+    color: white;
+}
+
+.message {
+    padding-top: 50px;
+    color:var(--dark-green);
+    font-size: 10px;
+    font-weight: 50;
+    text-align: center;
+    margin-bottom: 10px;  
+}
+
+/*Carusel*/
+.swiper {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom:100px;
+}
+
+.swiper-wrapper {
+    display: flex;
+    height: 30em;
+    align-items: center;
+}
+
+.swiper-slide {
+    display: flex;
+    width: 16em;
+    height: 80%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--light_green);
+    border-radius: 1.5em;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.25); 
+    transition: transform 0.2s ease-in-out;
+    padding: 2em 1.5em;
+    overflow: visible;
+}
+
+.swiper-slide:hover {
+    transform:scale(1.1);
+    cursor:pointer;
+    box-shadow: 10px 8px 10px rgba(118, 116, 118, 0.5)
+}
+
+.image {
+    overflow: hidden;
+    width: 100%;
+    height: 18em;
+    margin-bottom: 0.6em;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 1.0em;
+    font-weight: bold;
+    margin-top: 0.5em;
+    margin-bottom: 0.3em;
+}
+
+#title1 {
+    color:rgb(181, 84, 100);
+}
+
+#title2 {
+    color:rgb(206, 119, 13);
+}
+
+#title3 {
+    color:  rgb(51, 30, 3);
+}
+
+#title4 {
+    color:rgb(75, 138, 197);
+}
+
+#prim {
+    background-color: rgb(181, 84, 100);
+}
+   
+#doi {
+    background-color: rgb(206, 119, 13);
+}
+#trei {
+    background-color: rgb(51, 30, 3);
+}   
+#patru {
+    background-color: rgb(75, 138, 197);
+}
+
+.button_select {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: var(--dark-green);
+    padding: 0.7em 1.8em;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    margin-top: 0.6em;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    display:inline-block;
+    margin: 0 13px !important;
+}
+
+/*Secțiunea de final*/
+footer {
+    background-color: #ffffff; 
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.2); 
+    width: 100%;
+    padding: 1rem;
+    position:fixed;
+    bottom:0;
+    text-align:center;
+    margin-bottom:0.1rem;
+}
